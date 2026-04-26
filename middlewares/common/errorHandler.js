@@ -14,7 +14,7 @@ const errorHandler = (err, req, res, next) => {
 
   res.status(err.status || 500);
 
-  if (!res.locals.html) {
+  if (res.locals.html) {
     // Html response
     res.render("error", {
       title: "Error Page",
