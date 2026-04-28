@@ -9,24 +9,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devrazzak/node-chat-application.git"
+    "url": "git+https://github.com/learnwithsumit/chat-application.git"
   },
-  "author": "MD Abdur Razzak",
-  "license": "ISC",
+  "author": "Sumit Saha <sumit.analyzen@gmail.com>",
+  "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/devrazzak/node-chat-application/issues"
+    "url": "https://github.com/learnwithsumit/chat-application/issues"
   },
-  "homepage": "https://github.com/devrazzak/node-chat-application#readme",
+  "homepage": "https://github.com/learnwithsumit/chat-application#readme",
   "dependencies": {
-    "bcrypt": "^6.0.0",
-    "cookie-parser": "^1.4.7",
-    "dotenv": "^17.4.2",
-    "ejs": "^5.0.2",
-    "express": "^5.2.1",
-    "express-validator": "^7.3.2",
-    "http-errors": "^2.0.1",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.5.0",
-    "multer": "^2.1.1"
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.11",
+    "multer": "^1.4.2",
+    "socket.io": "^4.1.2"
   }
 }

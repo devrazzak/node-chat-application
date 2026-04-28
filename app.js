@@ -3,7 +3,9 @@ const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
 const mongoose = require("mongoose");
+const http = require("http");
 const cookieParser = require("cookie-parser");
+const moment = require("moment");
 
 const {
   notFoundHandler,
@@ -15,7 +17,15 @@ const inboxRouter = require("./router/inboxRouter");
 
 // Initialize app
 const app = express();
+const server = http.createServer(app);
 dotenv.config();
+
+// socket creation
+const io = require("socket.io")(server);
+global.io = io;
+
+// set comment as app locals
+app.locals.moment = moment;
 
 const PORT = process.env.PORT || 5000;
 const MONGO_CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING;
@@ -54,7 +64,7 @@ const startServer = async () => {
     await mongoose.connect(MONGO_CONNECTION_STRING);
     console.log("Database Connection Successful...");
 
-    app.listen(PORT, () => {
+    server.listen(PORT, () => {
       console.log(`App listening to port ${PORT}`);
     });
   } catch (err) {
