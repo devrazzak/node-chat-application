@@ -62,7 +62,7 @@ app.use(errorHandler);
 const startServer = async () => {
   try {
     await mongoose.connect(MONGO_CONNECTION_STRING);
-    console.log("Database Connection Successful...");
+    // console.log("Database Connection Successful...");
 
     server.listen(PORT, () => {
       console.log(`App listening to port ${PORT}`);
